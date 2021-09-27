@@ -22,3 +22,10 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+
+class Hero(models.Model):
+    real_name = models.CharField(max_length=50)
+    known_as = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.known_as
